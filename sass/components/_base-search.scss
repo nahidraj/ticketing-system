@@ -1,0 +1,13 @@
+.base_search{
+  .view{
+    flex: 0 0 auto;
+  }
+  .search_box{
+    flex-grow: 1;
+    width: 100%;
+  }
+  .theme_btn{
+    margin-left: 50px;
+    flex: 0 0 auto;
+  }
+}

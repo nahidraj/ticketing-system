@@ -1,0 +1,17 @@
+.footer_area {
+  background-color: $white;
+  margin-top: auto;
+  padding: 20px 0;
+
+  p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    a{
+      color: $primary;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}

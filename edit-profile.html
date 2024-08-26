@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ticketing System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="CMS">
+  <link rel="shortcut icon" href="images/Fevicon.png" type="image/x-icon">
+  <!--all css link -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/chosen.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+  <!-- full page loading -->
+  <div class="fullpage_loader">
+    <div class="loader"></div>
+  </div>
+  <!-- main area start -->
+  <main class="e_ticketing_frontend">
+    <section class="e_header_area">
+      <div class="container">
+        <div class="main d-flex align-items-center justify-content-between gap-3">
+          <div class="logo">
+            <a href="index.html" class="logo_name">Ticketing System</a>
+          </div>
+          <div class="menus d-flex align-items-center justify-content-end gap-3">
+            <div class="menu">
+              <ul class="list-unstyled">
+                <li class="active_menu"><a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-layout-dashboard">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M5 4h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" />
+                      <path d="M5 16h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" />
+                      <path d="M15 12h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" />
+                      <path d="M15 4h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" /></svg>
+                    Dashboard
+                  </a></li>
+                <li><a href="tickets.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-ticket">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M15 5l0 2" />
+                      <path d="M15 11l0 2" />
+                      <path d="M15 17l0 2" />
+                      <path
+                        d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
+                    </svg>
+                    Tickets
+                  </a></li>
+                <li><a href="edit-profile.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                      <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                      <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" /></svg>
+                    Edit Profile
+                  </a></li>
+                <li><a href="login.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-logout">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                      <path d="M9 12h12l-3 -3" />
+                      <path d="M18 15l3 -3" /></svg>
+                    Logout</a></li>
+              </ul>
+            </div>
+            <div class="menu_options d-flex align-items-center gap-4">
+              <div class="icon_box position-relative">
+                <button class="icon_btn dropdown_menu bg-transparent border-0 position-relative">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-bell">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                    <path d="M9 17v1a3 3 0 0 0 6 0v-1" /></svg>
+                  <sup
+                    class="notification_number position-absolute rounded-pill d-flex justify-content-center align-items-center">5</sup>
+                </button>
+                <div
+                  class="information_box dropdown_menu_info notification_information position-absolute top-100 end-0">
+                  <div class="top d-flex justify-content-between align-items-center gap-4">
+                    <h3 class="title">Notification</h3>
+                    <button class="clear bg-transparent border-0">Clear</button>
+                  </div>
+                  <div class="list">
+                    <!-- <h4 class="no_list">
+                      <div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-alarm-minus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M7 4l-2.75 2" /><path d="M17 4l2.75 2" /><path d="M10 13h4" /></svg></div>
+                      No Notification Found
+                    </h4> -->
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="#" class="d-flex w-100 align-items-center">
+                          <div class="img"><img src="images/profile-user.png" alt="profile-user"></div>
+                          <div class="info">
+                            <h4 class="name">Erin Gonzales</h4>
+                            <p>comment on your board</p>
+                          </div>
+                          <div class="time">7:57PM</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="d-flex w-100 align-items-center">
+                          <div class="img warning">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="icon icon-tabler icons-tabler-outline icon-tabler-alert-triangle">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M12 9v4" />
+                              <path
+                                d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" />
+                              <path d="M12 16h.01" /></svg>
+                          </div>
+                          <div class="info">
+                            <h4 class="name">Erin Gonzales</h4>
+                            <p>comment on your board</p>
+                          </div>
+                          <div class="time">7:57PM</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="d-flex w-100 align-items-center">
+                          <div class="img"><img src="images/profile-user.png" alt="profile-user"></div>
+                          <div class="info">
+                            <h4 class="name">Erin Gonzales</h4>
+                            <p>comment on your board</p>
+                          </div>
+                          <div class="time">7:57PM</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="d-flex w-100 align-items-center">
+                          <div class="img"><img src="images/profile-user.png" alt="profile-user"></div>
+                          <div class="info">
+                            <h4 class="name">Erin Gonzales</h4>
+                            <p>comment on your board</p>
+                          </div>
+                          <div class="time">7:57PM</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="d-flex w-100 align-items-center">
+                          <div class="img mail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path
+                                d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                              <path d="M3 7l9 6l9 -6" /></svg>
+                          </div>
+                          <div class="info">
+                            <h4 class="name">Erin Gonzales</h4>
+                            <p>comment on your board</p>
+                          </div>
+                          <div class="time">7:57PM</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="d-flex w-100 align-items-center">
+                          <div class="img"><img src="images/profile-user.png" alt="profile-user"></div>
+                          <div class="info">
+                            <h4 class="name">Erin Gonzales</h4>
+                            <p>comment on your board</p>
+                          </div>
+                          <div class="time">7:57PM</div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btm text-center">
+                    <button class="view w-100">View All</button>
+                  </div>
+                </div>
+              </div>
+              <button class="user_box d-flex align-items-center gap-3 bg-transparent border-0 text-start">
+                <div class="img">
+                  <img src="images/profile-user.png" alt="profile-user">
+                </div>
+                <div class="name">
+                  <h4 class="nm">Nahid Raj</h4>
+                  <small>Frontend developer</small>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content_body">
+      <div class="container">
+        <div class="profile_page">
+          <div class="row g-3">
+            <div class="col-xxl-9 col-xl-8">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card_title">Personal Information</h4>
+                  <form action="#">
+                    <div class="row g-3">
+                      <div class="col-xl-4 col-md-6">
+                        <div class="form-group">
+                          <label class="form-label d-flex justify-content-between align-items-center gap-4">
+                            <div class="lft">
+                              First Name <sup class="text-danger">*</sup>
+                            </div>
+                          </label>
+                          <div class="input-group position-relative">
+                            <input type="text" class="form-control" placeholder="Enter your first name">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-md-6">
+                        <div class="form-group">
+                          <label class="form-label d-flex justify-content-between align-items-center gap-4">
+                            <div class="lft">
+                              Last Name
+                            </div>
+                          </label>
+                          <div class="input-group position-relative">
+                            <input type="text" class="form-control" placeholder="Enter your last name">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-md-6">
+                        <div class="form-group">
+                          <label class="form-label d-flex justify-content-between align-items-center gap-4">
+                            <div class="lft">
+                              Select Gender
+                            </div>
+                          </label>
+                          <div class="input-group position-relative">
+                            <select class="chosen">
+                              <option>--Select Gender--</option>
+                              <option>Male</option>
+                              <option>Female</option>
+                              <option>Other</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-md-6">
+                        <div class="form-group">
+                          <label class="form-label d-flex justify-content-between align-items-center gap-4">
+                            <div class="lft">
+                              Phone Number
+                            </div>
+                          </label>
+                          <div class="input-group position-relative">
+                            <input type="text" class="form-control" placeholder="Enter your phone">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-md-6">
+                        <div class="form-group">
+                          <label class="form-label d-flex justify-content-between align-items-center gap-4">
+                            <div class="lft">
+                              Email Address
+                            </div>
+                          </label>
+                          <div class="input-group position-relative">
+                            <input type="text" class="form-control" placeholder="Enter your email">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-md-6">
+                        <div class="form-group">
+                          <label class="form-label d-flex justify-content-between align-items-center gap-4">
+                            <div class="lft">
+                              Birthdate
+                            </div>
+                          </label>
+                          <div class="input-group position-relative">
+                            <input type="date" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-12 col-md-12">
+                        <div class="form-group">
+                          <label class="form-label d-flex justify-content-between align-items-center gap-4">
+                            <div class="lft">
+                              Description
+                            </div>
+                          </label>
+                          <div class="input-group position-relative">
+                            <textarea rows="6" class="textarea-control h-auto"
+                              placeholder="Write your description"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <h4 class="card_title mt-3 mb-0">Address Information</h4>
+                      </div>
+                      <div class="col-xl-8 col-md-6">
+                        <div class="form-group">
+                          <label class="form-label d-flex justify-content-between align-items-center gap-4">
+                            <div class="lft">
+                              Address <sup class="text-danger">*</sup>
+                            </div>
+                          </label>
+                          <div class="input-group position-relative">
+                            <textarea class="textarea-control" placeholder="Enter your home address"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-md-6">
+                        <div class="form-group">
+                          <label class="form-label d-flex justify-content-between align-items-center gap-4">
+                            <div class="lft">
+                              City <sup class="text-danger">*</sup>
+                            </div>
+                          </label>
+                          <div class="input-group position-relative">
+                            <input type="text" class="form-control" placeholder="Enter your city">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-md-6">
+                        <div class="form-group">
+                          <label class="form-label d-flex justify-content-between align-items-center gap-4">
+                            <div class="lft">
+                              State <sup class="text-danger">*</sup>
+                            </div>
+                          </label>
+                          <div class="input-group position-relative">
+                            <input type="text" class="form-control" placeholder="Enter your state">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-md-6">
+                        <div class="form-group">
+                          <label class="form-label d-flex justify-content-between align-items-center gap-4">
+                            <div class="lft">
+                              Zip Code <sup class="text-danger">*</sup>
+                            </div>
+                          </label>
+                          <div class="input-group position-relative">
+                            <input type="text" class="form-control" placeholder="Enter your zipcode">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-md-6">
+                        <div class="form-group">
+                          <label class="form-label d-flex justify-content-between align-items-center gap-4">
+                            <div class="lft">
+                              Road Number <sup class="text-danger">*</sup>
+                            </div>
+                          </label>
+                          <div class="input-group position-relative">
+                            <input type="text" class="form-control" placeholder="Enter your road number">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="theme_btn">Save Profile</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-4">
+              <div class="profile_info">
+                <div class="row g-3">
+                  <div class="col-md-6 col-xl-12">
+                    <div class="card overflow-hidden">
+                      <div class="card-body p-0">
+                        <div class="profile_image">
+                          <div class="image position-relative">
+                            <div class="img position-relative">
+                              <img src="images/user.png" alt="profile-edit" class="img-fluid w-100">
+                            </div>
+                            <label class="file_upload_label2" for="file">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-upload">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                <path d="M7 9l5 -5l5 5" />
+                                <path d="M12 4l0 12" /></svg>
+                                Upload Image
+                            </label>
+                            <input type="file" id="file" class="d-none">
+                          </div>
+                        </div>
+                        <div class="profile_text text-center">
+                          <h3 class="name">Raihana Islam</h3>
+                          <p class="designation">Software Developer</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-xl-12">
+                    <div class="card overflow-hidden">
+                      <div class="card-body">
+                        <div class="profile_description">
+                          <h4 class="card_title mb-2">About Me</h4>
+                          <p class="p_1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eius
+                            similique necessitatibus dolor, voluptates at deserunt architecto ullam doloremque nisi
+                            vitae debitis</p>
+                          <h4 class="card_title my-3">Personal Information</h4>
+                          <div class="info_item d-flex align-items-center gap-3">
+                            <div class="icon">
+                              <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
+                            </div>
+                            <div class="info">
+                              <h5 class="title">Email Address</h5>
+                              <p>info@nogorsolutions.com</p>
+                            </div>
+                          </div>
+                          <div class="info_item d-flex align-items-center gap-3">
+                            <div class="icon">
+                              <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-phone"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg>
+                            </div>
+                            <div class="info">
+                              <h5 class="title">Phone Number</h5>
+                              <p>01748007847</p>
+                            </div>
+                          </div>
+                          <div class="info_item d-flex align-items-center gap-3">
+                            <div class="icon">
+                              <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></svg>
+                            </div>
+                            <div class="info">
+                              <h5 class="title">Location</h5>
+                              <p>Gulshan, Dhaka - 1212</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer_area text-center">
+      <p>Copyright © 2024 <a href="#">Nogor Solutions Limited.</a> All Rights Reserved.</p>
+    </footer>
+  </main>
+  <!-- main area end -->
+
+
+  <!-- all js link -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/chosen.jquery.min.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
+</script>
