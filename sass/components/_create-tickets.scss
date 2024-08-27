@@ -1,0 +1,66 @@
+.recent_tickets {
+  li {
+    a {
+      .title {
+        color: $black;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      .badges {
+        color: $primary;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 5px;
+
+        .icon {
+          stroke: $primary;
+        }
+
+        small {
+          color: $black;
+          font-size: 14px;
+        }
+      }
+
+      .date_time {
+        color: $paragraph;
+        font-size: 13px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .closed {
+    .title {
+      color: #8A8A8A;
+      font-weight: 400;
+    }
+
+    .badges {
+      color: #8A8A8A;
+      font-weight: 400;
+
+      .icon {
+        stroke: #8A8A8A !important;
+      }
+
+      small {
+        color: #8A8A8A;
+      }
+    }
+
+
+    .date_time {
+      color: #8A8A8A;
+    }
+  }
+
+  li+li {
+    margin-top: 14px;
+    border-top: 1px solid #ddd;
+    padding-top: 14px;
+  }
+}

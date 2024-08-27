@@ -68,6 +68,8 @@ body {
   background-color: #0B57D0;
   border: 0;
   transition: 0.2s;
+  text-align: center;
+  min-width: 120px;
 }
 .theme_btn svg {
   margin-right: 4px;
@@ -475,6 +477,9 @@ body {
 }
 
 .page_header {
+  margin-bottom: 20px;
+}
+.page_header .title {
   color: #141314;
   font-size: 24px;
   font-weight: 600;
@@ -618,6 +623,10 @@ body {
 .form-label .rgt .info_btn svg {
   width: 18px;
   height: 18px;
+}
+
+.form-control[type=file] {
+  line-height: 28px;
 }
 
 .form-control {
@@ -1300,6 +1309,78 @@ th.sl {
     font-size: 14px;
   }
 }
+.recent_tickets li a .title {
+  color: #141314;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.recent_tickets li a .badges {
+  color: #0B57D0;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.recent_tickets li a .badges .icon {
+  stroke: #0B57D0;
+}
+.recent_tickets li a .badges small {
+  color: #141314;
+  font-size: 14px;
+}
+.recent_tickets li a .date_time {
+  color: #323232;
+  font-size: 13px;
+  font-weight: 400;
+}
+.recent_tickets .closed .title {
+  color: #8A8A8A;
+  font-weight: 400;
+}
+.recent_tickets .closed .badges {
+  color: #8A8A8A;
+  font-weight: 400;
+}
+.recent_tickets .closed .badges .icon {
+  stroke: #8A8A8A !important;
+}
+.recent_tickets .closed .badges small {
+  color: #8A8A8A;
+}
+.recent_tickets .closed .date_time {
+  color: #8A8A8A;
+}
+.recent_tickets li + li {
+  margin-top: 14px;
+  border-top: 1px solid #ddd;
+  padding-top: 14px;
+}
+
+.mutiple_add_options .multiple_item .form-group {
+  flex-grow: 1;
+}
+.mutiple_add_options .multiple_item + .multiple_item {
+  margin-top: 12px;
+}
+.mutiple_add_options .action_btn {
+  flex: 0 0 auto;
+}
+.mutiple_add_options .action_btn button {
+  width: 42px;
+  height: 42px;
+  background-color: crimson;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: #ffffff;
+  border: 0;
+}
+.mutiple_add_options .action_btn .add {
+  background-color: green;
+}
+
 .footer_area {
   background-color: #ffffff;
   margin-top: auto;

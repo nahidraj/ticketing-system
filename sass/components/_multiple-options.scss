@@ -1,0 +1,27 @@
+.mutiple_add_options{
+  .multiple_item{
+    .form-group{
+      flex-grow: 1;
+    }
+  }
+  .multiple_item+.multiple_item{
+    margin-top: 12px;
+  }
+  .action_btn{
+    flex: 0 0 auto;
+    button{
+      width: 42px;
+      height: 42px;
+      background-color: crimson;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      color: $white;
+      border: 0;
+    }
+    .add{
+      background-color: green;
+    }
+  }
+}
