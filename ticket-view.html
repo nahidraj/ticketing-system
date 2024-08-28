@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ticketing System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="CMS">
+  <link rel="shortcut icon" href="images/Fevicon.png" type="image/x-icon">
+  <!--all css link -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/chosen.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+  <!-- full page loading -->
+  <div class="fullpage_loader">
+    <div class="loader"></div>
+  </div>
+  <!-- main area start -->
+  <main class="e_ticketing_frontend">
+    <section class="e_header_area">
+      <div class="container">
+        <div class="main d-flex align-items-center justify-content-between gap-3">
+          <div class="logo">
+            <a href="index.html" class="logo_name">Ticketing System</a>
+          </div>
+          <div class="menus d-flex align-items-center justify-content-end gap-3">
+            <div class="menu">
+              <ul class="list-unstyled">
+                <li class="active_menu"><a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-layout-dashboard">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M5 4h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" />
+                      <path d="M5 16h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" />
+                      <path d="M15 12h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" />
+                      <path d="M15 4h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" /></svg>
+                    Dashboard
+                  </a></li>
+                <li><a href="tickets.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-ticket">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M15 5l0 2" />
+                      <path d="M15 11l0 2" />
+                      <path d="M15 17l0 2" />
+                      <path
+                        d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
+                    </svg>
+                    Tickets
+                  </a></li>
+                <li><a href="edit-profile.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                      <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                      <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" /></svg>
+                    Edit Profile
+                  </a></li>
+                <li><a href="login.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-logout">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                      <path d="M9 12h12l-3 -3" />
+                      <path d="M18 15l3 -3" /></svg>
+                    Logout</a></li>
+              </ul>
+            </div>
+            <div class="menu_options d-flex align-items-center gap-4">
+              <div class="icon_box position-relative">
+                <button class="icon_btn dropdown_menu bg-transparent border-0 position-relative">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-bell">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                    <path d="M9 17v1a3 3 0 0 0 6 0v-1" /></svg>
+                  <sup
+                    class="notification_number position-absolute rounded-pill d-flex justify-content-center align-items-center">5</sup>
+                </button>
+                <div
+                  class="information_box dropdown_menu_info notification_information position-absolute top-100 end-0">
+                  <div class="top d-flex justify-content-between align-items-center gap-4">
+                    <h3 class="title">Notification</h3>
+                    <button class="clear bg-transparent border-0">Clear</button>
+                  </div>
+                  <div class="list">
+                    <!-- <h4 class="no_list">
+                      <div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-alarm-minus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M7 4l-2.75 2" /><path d="M17 4l2.75 2" /><path d="M10 13h4" /></svg></div>
+                      No Notification Found
+                    </h4> -->
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="#" class="d-flex w-100 align-items-center">
+                          <div class="img"><img src="images/profile-user.png" alt="profile-user"></div>
+                          <div class="info">
+                            <h4 class="name">Erin Gonzales</h4>
+                            <p>comment on your board</p>
+                          </div>
+                          <div class="time">7:57PM</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="d-flex w-100 align-items-center">
+                          <div class="img warning">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="icon icon-tabler icons-tabler-outline icon-tabler-alert-triangle">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M12 9v4" />
+                              <path
+                                d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" />
+                              <path d="M12 16h.01" /></svg>
+                          </div>
+                          <div class="info">
+                            <h4 class="name">Erin Gonzales</h4>
+                            <p>comment on your board</p>
+                          </div>
+                          <div class="time">7:57PM</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="d-flex w-100 align-items-center">
+                          <div class="img"><img src="images/profile-user.png" alt="profile-user"></div>
+                          <div class="info">
+                            <h4 class="name">Erin Gonzales</h4>
+                            <p>comment on your board</p>
+                          </div>
+                          <div class="time">7:57PM</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="d-flex w-100 align-items-center">
+                          <div class="img"><img src="images/profile-user.png" alt="profile-user"></div>
+                          <div class="info">
+                            <h4 class="name">Erin Gonzales</h4>
+                            <p>comment on your board</p>
+                          </div>
+                          <div class="time">7:57PM</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="d-flex w-100 align-items-center">
+                          <div class="img mail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path
+                                d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                              <path d="M3 7l9 6l9 -6" /></svg>
+                          </div>
+                          <div class="info">
+                            <h4 class="name">Erin Gonzales</h4>
+                            <p>comment on your board</p>
+                          </div>
+                          <div class="time">7:57PM</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="d-flex w-100 align-items-center">
+                          <div class="img"><img src="images/profile-user.png" alt="profile-user"></div>
+                          <div class="info">
+                            <h4 class="name">Erin Gonzales</h4>
+                            <p>comment on your board</p>
+                          </div>
+                          <div class="time">7:57PM</div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btm text-center">
+                    <button class="view w-100">View All</button>
+                  </div>
+                </div>
+              </div>
+              <button class="user_box d-flex align-items-center gap-3 bg-transparent border-0 text-start">
+                <div class="img">
+                  <img src="images/profile-user.png" alt="profile-user">
+                </div>
+                <div class="name">
+                  <h4 class="nm">Nahid Raj</h4>
+                  <small>Frontend developer</small>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content_body">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-xl-9">
+            <div class="page_header">
+              <div class="row g-4">
+                <div class="col-xl-9 col-lg-8 align-self-center">
+                  <button class="bg-transparent border-0 ticket_info_btn" data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample">
+                    <h4 class="title">
+                      Ticket #137366 - Need to allow_url_f_open
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-caret-down">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M18 9c.852 0 1.297 .986 .783 1.623l-.076 .084l-6 6a1 1 0 0 1 -1.32 .083l-.094 -.083l-6 -6l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057v-.118l.005 -.058l.009 -.06l.01 -.052l.032 -.108l.027 -.067l.07 -.132l.065 -.09l.073 -.081l.094 -.083l.077 -.054l.096 -.054l.036 -.017l.067 -.027l.108 -.032l.053 -.01l.06 -.01l.057 -.004l12.059 -.002z" />
+                      </svg>
+                    </h4>
+                  </button>
+                  <div class="collapse mt-3 ticket_info_details" id="collapseExample">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti est totam fugiat eligendi harum
+                    qui
+                    at quam laudantium, tempore recusandae velit expedita quibusdam maiores facere rem voluptate saepe
+                    dicta
+                    enim cum nam. Reiciendis quo quam totam repudiandae sed cum quaerat.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reply_box">
+              <button data-bs-toggle="collapse" data-bs-target="#collapseExample1"
+                class="reply_btn d-flex align-items-center justify-content-between gap-3">
+                <div class="text">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-message-dots">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 11v.01" />
+                    <path d="M8 11v.01" />
+                    <path d="M16 11v.01" />
+                    <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3z" />
+                  </svg>
+                  Reply
+                </div>
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                    class="icon icon-tabler icons-tabler-filled icon-tabler-caret-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M18 9c.852 0 1.297 .986 .783 1.623l-.076 .084l-6 6a1 1 0 0 1 -1.32 .083l-.094 -.083l-6 -6l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057v-.118l.005 -.058l.009 -.06l.01 -.052l.032 -.108l.027 -.067l.07 -.132l.065 -.09l.073 -.081l.094 -.083l.077 -.054l.096 -.054l.036 -.017l.067 -.027l.108 -.032l.053 -.01l.06 -.01l.057 -.004l12.059 -.002z" />
+                  </svg>
+                </div>
+              </button>
+              <div id="collapseExample1" class="collapse reply_form_box">
+                <div class="row g-3">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-label">Name</label>
+                      <div class="input-group position-relative">
+                        <input type="text" class="form-control" disabled value="Mustafizur Rahman"
+                          placeholder="Enter you name">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-label">Email Address</label>
+                      <div class="input-group position-relative">
+                        <input type="text" class="form-control" disabled value="Mustafizur Rahman"
+                          placeholder="Enter you email">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <label class="form-label d-flex justify-content-between align-items-center gap-4">
+                        Message
+                      </label>
+                      <div class="input-group position-relative">
+                        <textarea rows="6" class="textarea-control h-auto"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <button type="button" class="theme_btn">
+                      Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="messages_area">
+              <div class="msg_box message_owner">
+                <div class="msg_header d-flex align-items-center justify-content-between">
+                  <div class="user d-flex align-items-center gap-2">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" /></svg>
+                    </span>
+                    <h4 class="title">Mustafizur Rahman <span class="tags">Owner</span></h4>
+                  </div>
+                  <div class="time">
+                    <p>Sunday, 23 July 2024 (17:54)</p>
+                  </div>
+                </div>
+                <div class="msg_body">
+                  <p>Reseller Hosting (BDIEX) - RGH - 100G</p>
+                  <p>BD-reseller.nogorsolutions.com</p>
+                  <p>Domain: nogorsolutions.com</p>
+                </div>
+              </div>
+              <div class="msg_box message_client child_msg">
+                <div class="msg_header d-flex align-items-center justify-content-between">
+                  <div class="user d-flex align-items-center gap-2">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" /></svg>
+                    </span>
+                    <h4 class="title">Touhiduzzaman Rafi <span class="tags client">Operator</span></h4>
+                  </div>
+                  <div class="time">
+                    <p>Sunday, 23 July 2024 (17:54)</p>
+                  </div>
+                </div>
+                <div class="msg_body">
+                  <p>Hello,</p>
+                  <p>Could you please provide us the hosting account or domain name to investigate the issue?</p>
+                  <p>Thank You.</p>
+                  <p>Regards,</p>
+                  <p>MD Tahmiduzzanman Rafi</p>
+                </div>
+                <div class="msg_footer">
+                  <h4 class="title">Attachments (3)</h4>
+                  <div class="d-flex align-items-center gap-3">
+                    <button class="d-flex align-items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-layout-collage">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                        <path d="M10 4l4 16" />
+                        <path d="M12 12l-8 2" /></svg>
+                      <span class="line-limit-1">Image_2024...</span>
+                    </button>
+                    <button class="d-flex align-items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-layout-collage">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                        <path d="M10 4l4 16" />
+                        <path d="M12 12l-8 2" /></svg>
+                      <span class="line-limit-1">Image_2024...</span>
+                    </button>
+                    <button class="d-flex align-items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-layout-collage">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                        <path d="M10 4l4 16" />
+                        <path d="M12 12l-8 2" /></svg>
+                      <span class="line-limit-1">Image_2024...</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="msg_box message_owner child_msg">
+                <div class="msg_header d-flex align-items-center justify-content-between">
+                  <div class="user d-flex align-items-center gap-2">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" /></svg>
+                    </span>
+                    <h4 class="title">Mustafizur Rahman <span class="tags">Owner</span></h4>
+                  </div>
+                  <div class="time">
+                    <p>Sunday, 23 July 2024 (17:54)</p>
+                  </div>
+                </div>
+                <div class="msg_body">
+                  <p>Reseller Hosting (BDIEX) - RGH - 100G</p>
+                  <p>BD-reseller.nogorsolutions.com</p>
+                  <p>Domain: nogorsolutions.com</p>
+                </div>
+              </div>
+              <div class="msg_box message_client child_msg">
+                <div class="msg_header d-flex align-items-center justify-content-between">
+                  <div class="user d-flex align-items-center gap-2">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" /></svg>
+                    </span>
+                    <h4 class="title">Touhiduzzaman Rafi <span class="tags client">Operator</span></h4>
+                  </div>
+                  <div class="time">
+                    <p>Sunday, 23 July 2024 (17:54)</p>
+                  </div>
+                </div>
+                <div class="msg_body">
+                  <p>Hello,</p>
+                  <p>Could you please provide us the hosting account or domain name to investigate the issue?</p>
+                  <p>Thank You.</p>
+                  <p>Regards,</p>
+                  <p>MD Tahmiduzzanman Rafi</p>
+                </div>
+                <div class="msg_footer">
+                  <h4 class="title">Attachments (3)</h4>
+                  <div class="d-flex align-items-center gap-3">
+                    <button class="d-flex align-items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-layout-collage">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                        <path d="M10 4l4 16" />
+                        <path d="M12 12l-8 2" /></svg>
+                      <span class="line-limit-1">Image_2024...</span>
+                    </button>
+                    <button class="d-flex align-items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-layout-collage">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                        <path d="M10 4l4 16" />
+                        <path d="M12 12l-8 2" /></svg>
+                      <span class="line-limit-1">Image_2024...</span>
+                    </button>
+                    <button class="d-flex align-items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-layout-collage">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                        <path d="M10 4l4 16" />
+                        <path d="M12 12l-8 2" /></svg>
+                      <span class="line-limit-1">Image_2024...</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="msg_box message_owner child_msg">
+                <div class="msg_header d-flex align-items-center justify-content-between">
+                  <div class="user d-flex align-items-center gap-2">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" /></svg>
+                    </span>
+                    <h4 class="title">Mustafizur Rahman <span class="tags">Owner</span></h4>
+                  </div>
+                  <div class="time">
+                    <p>Sunday, 23 July 2024 (17:54)</p>
+                  </div>
+                </div>
+                <div class="msg_body">
+                  <p>Reseller Hosting (BDIEX) - RGH - 100G</p>
+                  <p>BD-reseller.nogorsolutions.com</p>
+                  <p>Domain: nogorsolutions.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3">
+            <div class="page_header">
+              <h4 class="title fs-5">Ticket Information</h4>
+            </div>
+            <div class="ticket_information_sidebar">
+              <div class="box">
+                <ul class="list-unstyled">
+                  <li>
+                    <h3 class="title">Requestor</h3>
+                    <p class="d-flex gap-3">Mustafizur Rahman <span class="tags">Owner</span></p>
+                  </li>
+                  <li>
+                    <h3 class="title">Department</h3>
+                    <p>Technical Support</p>
+                  </li>
+                  <li>
+                    <h3 class="title">Submitted</h3>
+                    <p>Sunday, August 4th, 2024 (11:10)</p>
+                  </li>
+                  <li>
+                    <h3 class="title">Last Updated</h3>
+                    <p>1 minute ago</p>
+                  </li>
+                  <li>
+                    <h3 class="title">Status</h3>
+                    <span class="statuss">Status</span>
+                  </li>
+                  <li>
+                    <h3 class="title">Priority</h3>
+                    <span class="statuss priority">Status</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="button_groups d-flex gap-3">
+                <button>Reply</button>
+                <button class="close">Close</button>
+              </div>
+              <div class="attachments">
+                <h4 class="a_title">Attachments</h4>
+                <button class="atc_box w-100 d-flex align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                    <path d="M7 11l5 5l5 -5" />
+                    <path d="M12 4l0 12" /></svg>
+                  <span class="line-limit-1">Image_2024_08-03</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer_area text-center">
+      <p>Copyright © 2024 <a href="#">Nogor Solutions Limited.</a> All Rights Reserved.</p>
+    </footer>
+  </main>
+  <!-- main area end -->
+
+
+  <!-- all js link -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/chosen.jquery.min.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
+</script>

@@ -52,6 +52,7 @@ body {
   color: $black;
   line-height: normal;
   background-color: $background;
+  overflow-y: scroll;
 }
 
 ::selection {
@@ -62,7 +63,7 @@ body {
 .theme_btn {
   color: $white;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
   text-transform: capitalize;
   padding: 8px 14px;

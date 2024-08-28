@@ -35,27 +35,27 @@
           text-decoration: underline;
         }
       }
-
-      .show_hide_password {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 12px;
-        background-color: transparent;
-        border: 0;
-        color: #878787;
-        transition: $transition;
-
-        &:hover {
-          color: $black;
-        }
-
-        svg {
-          width: 22px;
-          height: 22px;
-        }
-      }
     }
+  }
+}
+
+.show_hide_password {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+  background-color: transparent;
+  border: 0;
+  color: #878787;
+  transition: $transition;
+
+  &:hover {
+    color: $black;
+  }
+
+  svg {
+    width: 22px;
+    height: 22px;
   }
 }
 

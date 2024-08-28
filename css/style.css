@@ -50,6 +50,7 @@ body {
   color: #141314;
   line-height: normal;
   background-color: #F7F8FA;
+  overflow-y: scroll;
 }
 
 ::selection {
@@ -60,7 +61,7 @@ body {
 .theme_btn {
   color: #ffffff;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
   text-transform: capitalize;
   padding: 8px 14px;
@@ -483,6 +484,9 @@ body {
   color: #141314;
   font-size: 24px;
   font-weight: 600;
+}
+.page_header .ticket_info_details {
+  transition: none;
 }
 
 .base_search .view {
@@ -1309,6 +1313,12 @@ th.sl {
     font-size: 14px;
   }
 }
+.recent_tickets {
+  padding-bottom: 18px;
+}
+.recent_tickets li {
+  padding: 18px 14px 0 14px;
+}
 .recent_tickets li a .title {
   color: #141314;
   font-size: 15px;
@@ -1377,6 +1387,13 @@ th.sl {
   color: #ffffff;
   border: 0;
 }
+.mutiple_add_options .action_btn button:hover {
+  background-color: #141314;
+}
+.mutiple_add_options .action_btn button svg {
+  width: 20px;
+  height: 20px;
+}
 .mutiple_add_options .action_btn .add {
   background-color: green;
 }
@@ -1430,7 +1447,8 @@ th.sl {
 .login_area .login_main .login .forgot:hover {
   text-decoration: underline;
 }
-.login_area .login_main .login .show_hide_password {
+
+.show_hide_password {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1440,10 +1458,10 @@ th.sl {
   color: #878787;
   transition: all 0.3s ease-out 0s;
 }
-.login_area .login_main .login .show_hide_password:hover {
+.show_hide_password:hover {
   color: #141314;
 }
-.login_area .login_main .login .show_hide_password svg {
+.show_hide_password svg {
   width: 22px;
   height: 22px;
 }
@@ -1533,6 +1551,9 @@ th.sl {
   font-weight: 500;
   color: #323232;
 }
+.profile_page .profile_info .profile_description p {
+  font-size: 13px;
+}
 .profile_page .profile_info .profile_description .info_item {
   margin-bottom: 16px;
 }
@@ -1540,6 +1561,310 @@ th.sl {
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 5px;
+}
+
+.base_tabs .nav-pills {
+  border-bottom: 1px solid #E1E3E1;
+  display: flex;
+  gap: 0px;
+}
+
+.base_tabs .nav-item {
+  flex-grow: 1;
+  max-width: 320px;
+}
+
+.base_tabs .nav-link {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px 10px;
+  width: 100%;
+  border-radius: 0;
+  border-bottom: 3px solid transparent;
+}
+
+.base_tabs .nav-link.active {
+  background-color: transparent;
+  border-color: #0B57D0;
+}
+
+.base_tabs .nav-link:hover {
+  background-color: #F4F4F4 !important;
+}
+
+.base_tabs .nav-link .icon {
+  flex: 0 0 auto;
+  /* margin-right: 18px; */
+  position: relative;
+  top: -2px;
+}
+
+.base_tabs .nav-link .text {
+  margin-left: 10px;
+}
+
+.base_tabs .nav-link .icon .svg_icon {
+  color: #141314;
+  position: relative;
+  top: 1px;
+}
+
+.base_tabs .nav-link .title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #141314;
+  text-transform: capitalize;
+}
+
+.base_tabs .nav-link .title small {
+  font-size: 11px;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 50px;
+  background-color: #0B57D0;
+  margin-left: 10px;
+  position: relative;
+  tab-size: -2px;
+}
+
+.base_tabs .nav-link.active .icon .svg_icon {
+  stroke: #0B57D0;
+}
+
+.base_tabs .nav-link .icon i {
+  color: #141314 !important;
+}
+
+.base_tabs .nav-link.active .icon i {
+  color: #0B57D0 !important;
+}
+
+.base_tabs .nav-link.active .title {
+  color: #0B57D0;
+}
+
+.reply_box {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.reply_box .reply_btn {
+  background-color: transparent;
+  border: 0;
+  width: 100%;
+  padding: 12px 20px;
+}
+.reply_box .reply_btn .text {
+  color: #0B57D0;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: normal;
+}
+.reply_box .reply_btn .text svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  position: relative;
+  top: -1px;
+}
+.reply_box .reply_form_box {
+  border-top: 1px solid #E1E3E1;
+  padding: 14px 21px 15px;
+  transition: none;
+}
+
+.messages_area {
+  margin-top: 20px;
+  position: relative;
+}
+.messages_area::after {
+  top: 0;
+  left: 18px;
+  background-color: #7C7C7C;
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  z-index: -1;
+}
+.messages_area .msg_box + .msg_box {
+  margin-top: 20px;
+}
+.messages_area .msg_box {
+  border-radius: 10px;
+  background-color: #ffffff;
+  border-left: 3px solid #0B57D0;
+  position: relative;
+}
+.messages_area .msg_box::after {
+  top: 50%;
+  transform: translateY(-50%);
+  left: -44px;
+  background-color: #7C7C7C;
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  z-index: -1;
+}
+.messages_area .msg_box::before {
+  top: 50%;
+  transform: translateY(-50%);
+  left: -17px;
+  background: url(../images/arrow-right.svg);
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 9px;
+  z-index: -1;
+}
+.messages_area .msg_box:first-child::after {
+  display: none;
+}
+.messages_area .msg_box:first-child::before {
+  display: none;
+}
+.messages_area .msg_box .msg_header {
+  border-bottom: 1px solid #E1E3E1;
+  padding: 16px 20px;
+}
+.messages_area .msg_box .msg_header .title {
+  font-size: 19px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.messages_area .msg_box .msg_header .title .tags {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background-color: #0B57D0;
+  margin-left: 10px;
+}
+.messages_area .msg_box .msg_header .title .client {
+  background-color: #DA511F;
+}
+.messages_area .msg_box .msg_body {
+  padding: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.messages_area .msg_box .msg_body p + p {
+  margin-top: 0;
+}
+.messages_area .msg_box .msg_footer {
+  border-top: 1px solid #E1E3E1;
+  padding: 14px 20px;
+}
+.messages_area .msg_box .msg_footer .title {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.messages_area .msg_box .msg_footer button {
+  border-radius: 5px;
+  border: 1px solid #D9D9D9;
+  color: #323232;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 14px;
+  background-color: #ffffff;
+  text-align: left;
+}
+.messages_area .msg_box .msg_footer button svg {
+  width: 18px;
+  height: 18px;
+}
+.messages_area .msg_box .msg_footer button:hover {
+  background-color: #f5f5f5;
+}
+.messages_area .message_client {
+  border-left: 3px solid #DA511F;
+}
+.messages_area .child_msg {
+  margin-left: 60px;
+}
+
+.ticket_information_sidebar .box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 18px;
+}
+.ticket_information_sidebar .box ul li {
+  padding: 18px 14px 0 14px;
+}
+.ticket_information_sidebar .box ul li .title {
+  color: #141314;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.ticket_information_sidebar .box ul li p {
+  color: #323232;
+  font-size: 14px;
+  font-weight: 400;
+}
+.ticket_information_sidebar .box ul li p .tags {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background-color: #0B57D0;
+}
+.ticket_information_sidebar .box ul li + li {
+  margin-top: 14px;
+  border-top: 1px solid #ddd;
+  padding-top: 14px;
+}
+.ticket_information_sidebar .button_groups {
+  margin-bottom: 16px;
+}
+.ticket_information_sidebar .button_groups button {
+  width: 50%;
+  flex-grow: 1;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.19);
+  background-color: #0B57D0;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 11px 20px;
+  border: 0;
+}
+.ticket_information_sidebar .button_groups button:hover {
+  background-color: #DA511F;
+}
+.ticket_information_sidebar .button_groups .close {
+  background-color: #141314;
+}
+.ticket_information_sidebar .button_groups .close:hover {
+  background-color: #DA511F;
+}
+.ticket_information_sidebar .attachments .a_title {
+  color: #141314;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.ticket_information_sidebar .attachments .atc_box {
+  border-radius: 5px;
+  border: 1px solid #D9D9D9;
+  color: #323232;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 13px 18px;
+  background-color: #ffffff;
+  text-align: left;
+}
+.ticket_information_sidebar .attachments .atc_box svg {
+  position: relative;
+  top: -1px;
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
