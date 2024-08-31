@@ -1,17 +1,25 @@
 .footer_area {
   background-color: $white;
   margin-top: auto;
-  padding: 20px 0;
+  padding: 20px 24px;
 
   p {
     font-size: 15px;
     font-weight: 500;
     line-height: 22px;
-    a{
+
+    a {
       color: $primary;
-      &:hover{
+
+      &:hover {
         text-decoration: underline;
       }
     }
+  }
+}
+
+@media (max-width:575.98px) {
+  .footer_area p {
+    font-size: 14px;
   }
 }

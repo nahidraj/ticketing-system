@@ -1,14 +1,20 @@
 .page_header {
   margin-bottom: 20px;
+
   .title {
     color: $black;
     font-size: 24px;
     font-weight: 600;
   }
-  .ticket_info_btn{
 
-  }
-  .ticket_info_details{
+  .ticket_info_details {
     transition: none;
+  }
+}
+
+@media (max-width:575.98px) {
+  .page_header .title {
+    font-size: 18px !important;
+    text-align: left;
   }
 }

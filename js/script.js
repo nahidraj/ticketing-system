@@ -34,12 +34,6 @@ $(function () {
     e.stopPropagation(); 
   });
 
-  // Initialize tooltips
-  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl, {
-    trigger: 'hover'
-  }));
-
   // back to top js
   var btn = $(".scroll-to-top");
 
@@ -66,7 +60,7 @@ $(function () {
 
   // mobilel menu js
 
-  $(".mobile-topbar .bars").on("click", function () {
+  $(".menu_bar").on("click", function () {
     $(".mobile-menu-overlay,.mobile-menu-main").addClass("active");
     return false;
   });
