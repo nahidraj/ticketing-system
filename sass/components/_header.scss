@@ -257,6 +257,59 @@
         line-height: normal;
       }
     }
+
+    .user_dropdown_menu {
+      position: absolute;
+      top: 100%;
+      margin-top: 15px;
+      right: 0;
+      width: 240px;
+      background-color: $white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      visibility: hidden;
+      opacity: 0;
+      transition: $transition;
+      &::before{
+        position: absolute;
+        top: -15px;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+        content: "";
+        height: 15px;
+      }
+      ul{
+        li{
+          a{
+            padding: 10px 22px;
+            @include font(15px, 500);
+            display: block;
+            width: 100%;
+            color: $black;
+            svg{
+              position: relative;
+              width: 20px;
+              height: 20px;
+              margin-right: 6px;
+            }
+            &:hover{
+              background-color: $primary;
+              color: $white;
+            }
+          }
+        }
+        li+li{
+          border-top: 1px solid $border;
+        }
+      }
+    }
+
+    &:hover{
+      .user_dropdown_menu{
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -310,7 +363,7 @@
       padding-bottom: 14px;
     }
 
-    .user_box{
+    .user_box {
       padding: 20px;
       border-top: 1px solid $border !important;
       width: 100%;
