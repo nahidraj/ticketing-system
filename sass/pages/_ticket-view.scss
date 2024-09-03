@@ -298,3 +298,50 @@
     width: 15px;
   }
 }
+
+
+// admin part start
+
+.viewer_action_btn {
+  .p_btn {
+    width: 32px;
+    height: 32px;
+    background-color: #F2F2F2;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #4B4B4B;
+    margin-left: 5px;
+    border: 0;
+
+    &:hover {
+      background-color: $secondary1;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.view_sec_bg {
+  background-color: $background;
+  border: 1px solid #E3E3E3;
+  border-radius: 10px;
+  padding: 14px;
+  position: relative;
+  height: 100%;
+
+  .ticket_person{
+    .form-control{
+      height: auto !important;
+      border-radius: 0px !important;
+      border: none !important;
+      background-color: $background;
+      padding: 0 38px 0 14px;
+      font-weight: 600;
+    }
+  }
+}
