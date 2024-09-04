@@ -65,7 +65,7 @@ body {
   line-height: normal;
   text-transform: capitalize;
   padding: 9px 14px;
-  border-radius: 5px;
+  border-radius: 25px;
   background-color: #0B57D0;
   border: 0;
   transition: 0.2s;
@@ -2586,21 +2586,111 @@ th.sl {
   height: 18px;
 }
 
+.msg_reply_area .reply_card .reply_header {
+  border-bottom: 1px solid #E1E3E1;
+  padding: 16px 20px;
+}
+.msg_reply_area .reply_card .reply_header .title {
+  font-size: 19px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.msg_reply_area .reply_card .reply_body {
+  padding: 20px;
+}
+.msg_reply_area .action_btn .icon {
+  width: 18px !important;
+  height: 18px !important;
+  color: #141314;
+  margin: 0 7px;
+}
+.msg_reply_area .multiple_item input {
+  border-radius: 0 8px 8px 0 !important;
+}
+.msg_reply_area .multiple_item .input-group .chosen-container-single .chosen-single {
+  border-radius: 8px 0 0 8px !important;
+}
+
 .view_sec_bg {
   background-color: #F7F8FA;
   border: 1px solid #E3E3E3;
   border-radius: 10px;
   padding: 14px;
   position: relative;
-  height: 100%;
 }
-.view_sec_bg .ticket_person .form-control {
+.view_sec_bg .tags {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background-color: #0B57D0;
+  margin-left: 10px;
+}
+.view_sec_bg table th,
+.view_sec_bg table td {
+  background-color: transparent !important;
+  padding: 8px !important;
+}
+.view_sec_bg .time_sec {
+  width: 60%;
+}
+.view_sec_bg .time_sec button {
+  color: #000;
+  font-size: 14px;
+  padding: 5px;
+  min-width: 100px;
+}
+.view_sec_bg .time_sec button.start {
+  background-color: #8CFF82;
+}
+.view_sec_bg .time_sec button.pause {
+  background-color: #FFECA7;
+}
+.view_sec_bg .time_sec button.finish {
+  background-color: #FF6F6F;
+}
+.view_sec_bg .accordion-item, .view_sec_bg .accordion-button {
+  background-color: transparent !important;
+}
+.view_sec_bg .accordion-button:focus {
+  box-shadow: none;
+}
+.view_sec_bg .bg {
+  width: 24px;
+  height: 24px;
+  background-color: #F2F2F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #4B4B4B;
+  margin-left: 5px;
+  border: 0;
+}
+
+.less_drop .form-control {
   height: auto !important;
   border-radius: 0px !important;
   border: none !important;
   background-color: #F7F8FA;
   padding: 0 38px 0 14px;
   font-weight: 600;
+}
+
+.curr_team .mem_info {
+  width: 40%;
+}
+.curr_team .mem_info .image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+.curr_team .mem_info .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

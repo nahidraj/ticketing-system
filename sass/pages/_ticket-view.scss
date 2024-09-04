@@ -326,22 +326,149 @@
   }
 }
 
+.msg_reply_area {
+
+  .reply_card {
+    .reply_header {
+      border-bottom: 1px solid #E1E3E1;
+      padding: 16px 20px;
+
+      .title {
+        font-size: 19px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .reply_body {
+      padding: 20px;
+    }
+  }
+
+
+
+  .action_btn .icon {
+    width: 18px !important;
+    height: 18px !important;
+    color: #141314;
+    margin: 0 7px;
+  }
+
+  .multiple_item {
+    input {
+      border-radius: 0 8px 8px 0 !important;
+    }
+
+    .input-group .chosen-container-single .chosen-single {
+      border-radius: 8px 0 0 8px !important;
+    }
+  }
+}
+
 .view_sec_bg {
   background-color: $background;
   border: 1px solid #E3E3E3;
   border-radius: 10px;
   padding: 14px;
   position: relative;
-  height: 100%;
+  // height: 100%;
 
-  .ticket_person{
-    .form-control{
-      height: auto !important;
-      border-radius: 0px !important;
-      border: none !important;
-      background-color: $background;
-      padding: 0 38px 0 14px;
-      font-weight: 600;
+  .tags {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background-color: #0B57D0;
+    margin-left: 10px;
+  }
+
+  table {
+
+    th,
+    td {
+      background-color: transparent !important;
+      padding: 8px !important;
     }
+  }
+
+  .time_sec {
+    width: 60%;
+
+    button {
+      color: #000;
+      font-size: 14px;
+      padding: 5px;
+      min-width: 100px;
+    }
+
+    button.start {
+      background-color: #8CFF82;
+
+    }
+
+    button.pause {
+      background-color: #FFECA7;
+
+    }
+
+    button.finish {
+      background-color: #FF6F6F;
+
+    }
+  }
+
+  .accordion-item, .accordion-button{
+    background-color: transparent !important;
+  }
+
+  .accordion-button:focus{
+    box-shadow: none;
+  }
+
+  .bg {
+    width: 24px;
+    height: 24px;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #4B4B4B;
+    margin-left: 5px;
+    border: 0;
+  }
+
+}
+
+.less_drop {
+  .form-control {
+    height: auto !important;
+    border-radius: 0px !important;
+    border: none !important;
+    background-color: $background;
+    padding: 0 38px 0 14px;
+    font-weight: 600;
+  }
+}
+
+.curr_team {
+  .mem_info {
+    width: 40%;
+
+    .image {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+
   }
 }
