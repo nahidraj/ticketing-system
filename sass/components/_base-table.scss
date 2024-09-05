@@ -192,6 +192,7 @@ table {
       }
     }
 
+
     .action_td {
       padding-left: 0 !important;
       padding-right: 0 !important;
@@ -238,6 +239,30 @@ table {
         margin: 0 7px;
         // margin-left: 15px;
       }
+    }
+  }
+}
+
+.table_admin{
+  tbody{
+    .status {
+      font-size: 11px;
+      font-weight: 500;
+      color: $black;
+      padding: 3px 10px;
+      border-radius: 40px;
+      min-width: unset;
+    }
+    .pending {
+      background-color: #FEEB9C;
+    }
+
+    .approved {
+      background-color: #C6EECE;
+    }
+
+    .cancel {
+      background-color: #FEC6CE;
     }
   }
 }

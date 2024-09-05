@@ -73,3 +73,46 @@
     }
   }
 }
+
+
+// admin part start
+.top_short_info-admin {
+  padding: 15px 10px;
+
+  .text {
+    .label {
+      @include font(16px, 500);
+      color: $black;
+      margin-bottom: 13px;
+      text-align: start
+    
+    }
+
+    .title {
+      @include font(34px, 700);
+      color: $black;
+    }
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    background-color: #D3E3FD;
+    flex: 0 0 auto;
+
+    svg {
+      transition: $transition;
+      width: 40px;
+      height: 40px;
+      color: $black;
+    }
+  }
+
+  &:hover {
+    .icon {
+      svg {
+        transform: rotateY(380deg);
+      }
+    }
+  }
+}
