@@ -2074,6 +2074,13 @@ th.sl {
   background-color: green;
 }
 
+.msg_reply_area .multiple_item input {
+  border-radius: 0 8px 8px 0 !important;
+}
+.msg_reply_area .multiple_item .input-group .chosen-container-single .chosen-single {
+  border-radius: 8px 0 0 8px !important;
+}
+
 .footer_area {
   background-color: #ffffff;
   margin-top: auto;
@@ -2654,12 +2661,6 @@ th.sl {
   color: #141314;
   margin: 0 7px;
 }
-.msg_reply_area .multiple_item input {
-  border-radius: 0 8px 8px 0 !important;
-}
-.msg_reply_area .multiple_item .input-group .chosen-container-single .chosen-single {
-  border-radius: 8px 0 0 8px !important;
-}
 
 .view_sec_bg {
   background-color: #F7F8FA;
@@ -2690,15 +2691,8 @@ th.sl {
   font-size: 14px;
   padding: 5px;
   min-width: 100px;
-}
-.view_sec_bg .time_sec button.start {
-  background-color: #8CFF82;
-}
-.view_sec_bg .time_sec button.pause {
-  background-color: #FFECA7;
-}
-.view_sec_bg .time_sec button.finish {
-  background-color: #FF6F6F;
+  background: linear-gradient(145deg, #e2e8ec, #ffffff);
+  box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
 }
 .view_sec_bg .accordion-item, .view_sec_bg .accordion-button {
   background-color: transparent !important;

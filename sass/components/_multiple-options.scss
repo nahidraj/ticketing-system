@@ -1,15 +1,18 @@
-.mutiple_add_options{
-  .multiple_item{
-    .form-group{
+.mutiple_add_options {
+  .multiple_item {
+    .form-group {
       flex-grow: 1;
     }
   }
-  .multiple_item+.multiple_item{
+
+  .multiple_item+.multiple_item {
     margin-top: 12px;
   }
-  .action_btn{
+
+  .action_btn {
     flex: 0 0 auto;
-    button{
+
+    button {
       width: 42px;
       height: 42px;
       background-color: crimson;
@@ -19,16 +22,31 @@
       border-radius: 5px;
       color: $white;
       border: 0;
-      &:hover{
+
+      &:hover {
         background-color: $black;
       }
-      svg{
+
+      svg {
         width: 20px;
         height: 20px;
       }
     }
-    .add{
+
+    .add {
       background-color: green;
+    }
+  }
+}
+
+.msg_reply_area {
+  .multiple_item {
+    input {
+      border-radius: 0 8px 8px 0 !important;
+    }
+
+    .input-group .chosen-container-single .chosen-single {
+      border-radius: 8px 0 0 8px !important;
     }
   }
 }
