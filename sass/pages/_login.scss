@@ -1,17 +1,14 @@
 .login_area {
+  background: #F0F2F5;
   .container {
     min-height: 100vh;
   }
 
-  .login_main {
-    max-width: 1022px;
-    width: 100%;
-    border-radius: 20px;
-    background-color: $white;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
-
     .login {
       padding: 40px;
+      border-radius: 5px;
+      background-color: $white;
+      box-shadow: 0 3px 5px rgba(0,0,0,.05);
 
       .logo {
         margin-bottom: 55px;
@@ -36,7 +33,6 @@
         }
       }
     }
-  }
 }
 
 .show_hide_password {
